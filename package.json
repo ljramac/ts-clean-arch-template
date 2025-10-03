@@ -1,0 +1,50 @@
+{
+  "name": "ts-clean-arch",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Lino Rama <ljramac@gmail.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0",
+    "lint": "npx eslint src",
+    "lint:fix": "npx eslint src --fix",
+    "prettier": "npx prettier --write",
+    "start": "npx ts-node --compiler-options '{\"module\":\"commonjs\"}' src/index.ts",
+    "prepare": "npx husky"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "mongoose": "8.19.0"
+  },
+  "engines": {
+    "node": "24.9.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run lint:fix",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "24.6.2",
+    "@typescript-eslint/eslint-plugin": "8.45.0",
+    "@typescript-eslint/parser": "8.45.0",
+    "eslint": "9.36.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.4",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.3",
+    "prettier": "3.6.2",
+    "ts-node": "10.9.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "8.45.0"
+  }
+}
