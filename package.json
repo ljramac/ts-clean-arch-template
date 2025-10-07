@@ -11,6 +11,7 @@
     "lint": "npx eslint src",
     "lint:fix": "npx eslint src --fix",
     "prettier": "npx prettier --write",
+    "build": "tsc",
     "start": "npx ts-node --compiler-options '{\"module\":\"commonjs\"}' src/index.ts",
     "prepare": "npx husky"
   },
